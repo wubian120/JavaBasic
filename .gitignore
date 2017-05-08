@@ -1,0 +1,17 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+/target/
+/src/test/
+
+/.settings/
+
+/.metadata/.plugins/
+/.metadata/.mylyn/
+/.metadata/version.ini
+/.metadata/.lock
+
+/.idea/
+
+*.iml
+
+*:
+.project
