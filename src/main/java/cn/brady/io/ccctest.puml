@@ -1,0 +1,16 @@
+@startuml
+
+
+interface Shape
+interface Factory
+
+class Circle implements Shape
+class Triangle implements Shape
+
+class ShapeFactory implements Factory
+
+ShapeFactory <.. Circle
+ShapeFactory <.. Triangle
+
+
+@enduml
