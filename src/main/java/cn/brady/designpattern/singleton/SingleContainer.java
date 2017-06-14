@@ -10,7 +10,7 @@ import java.util.Objects;
 public class SingleContainer {
 
 
-    private static Map<String, Object> objMap = new HashMap<>();
+    private static Map<String, Object> objMap = new HashMap<String, Object>();
 
     private SingleContainer(){}
 
