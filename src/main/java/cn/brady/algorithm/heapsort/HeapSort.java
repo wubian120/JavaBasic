@@ -64,7 +64,7 @@ public class HeapSort {
 
     public static void main(String[] args){
 
-        int[] arra = {10,312,34,5,11,43,953,7,91,34,641};
+        int[] arra = {10,312,34,5,11,43,953,7,91,34,641,31,3456,12356,9,55,99,321,5432143,};
 
         sort(arra);
 
