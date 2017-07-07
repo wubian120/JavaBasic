@@ -1,17 +1,54 @@
-# Add any directories, files, or patterns you don't want to be tracked by version control
-/target/
-/src/test/
+*.class
 
-/.settings/
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
-/.metadata/.plugins/
-/.metadata/.mylyn/
-/.metadata/version.ini
-/.metadata/.lock
+# Package Files #
+*.jar
+*.war
+*.ear
 
-/.idea/
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
 
-*.iml
-
-*:
+# Ignore all logfiles and tempfiles.
 .project
+/*/.project
+
+.classpath
+/*/.classpath
+
+.settings
+/*/.settings
+/*/.settings/*
+
+target
+/*/target
+/*/target/*
+*/target/*
+*/target
+.DS_Store
+
+.svn
+.svn/*
+
+.idea
+.idea/*
+
+Thumbs.db
+
+*.log
+*.out
+
+
+# for ingore nodenotify-*/.externalToolBuilders/
+/nodenotify-*/.externalToolBuilders
+/nodenotify-*/.externalToolBuilders/*
+
+# IntelJ IDEA
+*.iml
+/*/*.iml
+*.ipr
+/*/*.ipr
+*.iws
+/*/*.iws

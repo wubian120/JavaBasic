@@ -7,6 +7,8 @@ import net.sf.cglib.proxy.MethodProxy;
 import java.lang.reflect.Method;
 
 /**
+ *
+ * https://yq.aliyun.com/articles/71337?utm_campaign=wenzhang&utm_medium=article&utm_source=QQ-qun&2017329&utm_content=m_15243
  * Created by Brady on 2017/6/13.
  */
 public class ProxyCgb implements MethodInterceptor{

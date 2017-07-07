@@ -27,6 +27,8 @@ public class UserManagerProxy implements InvocationHandler {
         try{
             System.out.println(" proxy invoke...");
 
+            System.out.println("Before...");
+
             obj = method.invoke(target,args);
 
 

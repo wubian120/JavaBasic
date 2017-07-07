@@ -16,7 +16,7 @@ public class DirList {
         File path = new File("d:/");
         String[] list;
         String[] argus ;
-        String argu1 = ".jar";
+        String argu1 = ".pdf";
         list = path.list(new DirFilter(argu1));
 
         Arrays.sort(list, String.CASE_INSENSITIVE_ORDER);
