@@ -4,8 +4,9 @@ package cn.brady.string;
 import org.apache.commons.lang3.CharSet;
 import org.apache.commons.lang3.CharSetUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 
-import java.util.Set;
+import java.util.*;
 
 /***
  * 选品关键字 处理
@@ -32,9 +33,22 @@ public class StringSeperation {
         String result = CharSetUtils.delete(sample,"/");
 
         String[] keys = StringUtils.split(sample,"/");
+        Set<String> keySet = new HashSet<>();
         for(String key :keys){
 
             System.out.println("Key: " + key);
+
+            if(key.contains("+")){
+                keySet.add(StringUtils.remove(key,"+"));
+//                StringUtils.remove(key,"+");
+            }
+            if(key.contains("-")){
+                keySet.add(StringUtils.remove(key,"-"));
+//                StringUtils.remove(key,"-");
+            }
+
+//            keySet.add(key);
+
 
         }
 
@@ -48,24 +62,81 @@ public class StringSeperation {
 
 
 
-
-
-
     }
+
+
 
 
     public static void main(String[] args){
 
 //        readKeysFromString(sample3);
 
+        String PLUS = "+";
+        String MINUS = "-";
 
-        String sampleKeyword = "halo/-simg／+等你哈／+草草";
-        KeywordProcedure keywordProc = new KeywordProcedure(sampleKeyword);
+        String kkk = "";
+        String sampleKEy = "key";
 
-        Set<Keyword> keywords = keywordProc.getKeywords();
+        kkk += PLUS + sampleKEy;
 
-        System.out.println(keywords.isEmpty());
+//        System.out.println(kkk);
 
+        String sampleKeyword = "haf-a-si  +mg+等你哈";
+
+        System.out.println(sampleKeyword);
+
+        StringUtils.trim(sampleKeyword);
+
+        System.out.println(sampleKeyword);
+
+        StringUtils.trimToEmpty(sampleKeyword);
+
+        System.out.println(sampleKeyword);
+//        if(StringUtils.containsAny(sampleKeyword,PLUS)){
+//            System.out.println(" Yes ");
+//
+//            String[] keys = StringUtils.splitByWholeSeparator(sampleKeyword, PLUS);
+//
+//            for(String k : keys){
+//                System.out.println(k);
+//            }
+//        }
+
+        String empty = " ";
+//        empty = StringUtils.trimToEmpty(empty); // output :true
+//        System.out.println(StringUtils.isEmpty(empty));
+
+        empty = StringUtils.trim(empty);
+        System.out.println(StringUtils.isEmpty(empty));
+
+
+
+        String s1 = "123-4mkj";
+
+        System.out.println(StringUtils.containsNone(s1,"+"));
+
+        String keyword = null;
+
+        List<String> keys = new ArrayList<>();
+        keys.add("423");
+        keys.add("15");
+        for(String k : keys){
+            k += "%";
+            keyword += k;
+        }
+
+        System.out.println(keyword);
+
+//        String s2 = StringUtils.removeEnd(keyword,"%");  去掉
+        String s2 = StringUtils.replace(s1,"-","%");  // 替换
+
+        System.out.println(s2);
+
+
+
+
+
+        System.out.println("...End...");
     }
 
 }
