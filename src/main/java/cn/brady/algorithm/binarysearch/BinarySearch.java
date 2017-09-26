@@ -9,9 +9,9 @@ public class BinarySearch {
 
     public static void main(String[] args){
 
-        int[] data = {2, 4, 6, 7, 9, 13, 16, 19, 31, 53, 84, 99, 101, 351};
-
-        int target = 191;
+        int[] data = { 23,2, 4, 6, 7, 9, 13, 16, 19, 31, 53, 84, 99, 101, 351};
+//
+        int target = 351;
         int index = BinarySearch.binarySearch(data, target);
 
         System.out.println("index : " + index);
@@ -33,8 +33,9 @@ public class BinarySearch {
         int e = data.length - 1;
         int index = -1;
 
-        while (s + 1 < e){
+        while (s  <  e){
             int mid = (e + s) / 2;
+            System.out.println("mid: "+mid);
 
             if(data[mid] == target){
                 index = mid;
