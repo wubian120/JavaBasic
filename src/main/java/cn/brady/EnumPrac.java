@@ -36,4 +36,32 @@ public class EnumPrac {
     }
 
 
+    public static void main(String[] args){
+
+        Planet p = Planet.EARTH;
+
+        switch (p){
+            case MARS:
+                System.out.println("mars");
+            case EARTH:
+                System.out.println("earth");
+            case VENUS:
+                System.out.println("venus");
+
+            case SATURN:
+                System.out.println("saturn ");
+            case URANUS:
+                System.out.println("uranus");
+                break;
+            case JUPITER:
+                System.out.println("mass: "+p.mass + " radius: " +p.radius());
+        }
+
+
+
+
+
+    }
+
+
 }
