@@ -20,7 +20,6 @@ public class HeapSort {
             adjustHeap(arr, 0, j);
         }
     }
-
     /**
      * 调整
      * @param arr
@@ -47,12 +46,9 @@ public class HeapSort {
             }else{
                 break;
             }
-
         }
         //temp 放在最终位置
         arr[i] = temp;
-
-
     }
 
     public static void swap(int[] arr, int a, int b){
@@ -61,15 +57,11 @@ public class HeapSort {
         arr[b] = temp;
     }
 
-
     public static void main(String[] args){
 
         int[] arra = {10,312,34,5,11,43,953,7,91,34,641,31,3456,12356,9,55,99,321,5432143,};
-
         sort(arra);
-
         System.out.println(Arrays.toString(arra));
 
     }
-
 }

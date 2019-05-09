@@ -26,8 +26,6 @@ public class ReentrantDeadLockExam {
 
     }
 
-
-
 }
 
 class InLock implements Runnable{

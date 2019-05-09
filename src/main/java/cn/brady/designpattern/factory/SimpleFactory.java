@@ -1,5 +1,7 @@
 package cn.brady.designpattern.factory;
 
+import org.springframework.util.StopWatch;
+
 /**
  * Created by Brady on 2017/5/18.
  */
@@ -10,6 +12,7 @@ public class SimpleFactory {
     public static final String TRIANGLE  = "triangle";
 
     public static Shape create(String name){
+
 
         Shape shape = null;
         if(name == null || name == ""){
@@ -33,6 +36,8 @@ public class SimpleFactory {
         String s1 = "rectangle";
         String s2 = "triangle";
 
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start();
         Shape shape1 = SimpleFactory.create(s);
         shape1.sayHi();
 
@@ -41,6 +46,11 @@ public class SimpleFactory {
 
         Shape shape3 = SimpleFactory.create(s2);
         shape3.sayHi();
+
+        stopWatch.stop();;
+
+        System.out.println(stopWatch.getTotalTimeSeconds());
+
 
     }
 

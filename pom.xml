@@ -9,6 +9,7 @@
     <module>quartz</module>
     <module>webfullstack</module>
     <module>crawler</module>
+    <module>multi-thread</module>
   </modules>
 
   <parent>

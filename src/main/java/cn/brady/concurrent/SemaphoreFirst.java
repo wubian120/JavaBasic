@@ -45,6 +45,9 @@ class MyThread extends Thread{
     public void run() {
 
         try{
+            /***
+             * ？？？
+             */
             semaphore.acquire(count);
             Thread.sleep(2000);
 

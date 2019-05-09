@@ -1,4 +1,4 @@
-package cn.brady.concurrent;
+package cn.brady.concurrent.threadpool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
