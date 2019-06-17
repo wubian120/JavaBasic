@@ -11,15 +11,22 @@ import java.util.List;
 public class A51N皇后 {
 
     public List<List<String>> solveNQueens(int n) {
+
         if (n <= 0) return null;
+
         List<List<String>> res = new ArrayList<List<String>>();
+        //每一行 放在 哪列 上
         int[] queen = new int[n];
+        
         BackTrack(res, queen, 0);
+
         return res;
     }
 
     public void BackTrack(List<List<String>> res, int[] queen, int pos) {
+
         if (pos == queen.length) {
+
             List<String> list = new ArrayList<String>();
             for (int i = 0; i < queen.length; i++) {
                 StringBuilder sb = addPoint(queen.length);
